@@ -1,7 +1,6 @@
-AngularJS & NodeJS Starter
+Battle Bots
 ========
-This is a blank project you can use to get started quickly with AngularJS
-and a Node backend.
+A prototype for a game that teaches kids basic programming concepts.
 
 ## Tech Used
 I don't like HTML, CSS, or JavaScript, so I don't use them. I encourage you
@@ -16,16 +15,12 @@ need to recompile manually using the *grunt jade* command).
 Run these commands to get things set up:
 
 ```
-> sudo apt-get install nodejs
-> sudo apt-get install npm
+> sudo apt-get install nodejs npm
 > sudo npm install
-> sudo npm install -g grunt-cli
 > sudo ln -s /usr/bin/nodejs /usr/bin/node
 > sudo grunt build
-> sudo npm install -g coffee-script
-> sudo npm install -g bower bower-installer
-> bower install
-> bower-installer
+> sudo npm install -g coffee-script bower bower-installer grunt-cli
+> bower install && bower-installer
 ```
 
 ## Build Scripts
