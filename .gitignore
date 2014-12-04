@@ -1,0 +1,8 @@
+*.swp
+*.swo
+*.swn
+/public/vendor
+/bower_components
+/node_modules
+/public/stylus/*.css
+/public/coffee/*.js

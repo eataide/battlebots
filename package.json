@@ -1,0 +1,26 @@
+{
+  "name": "MyApp",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "grunt": "~0.4.5",
+    "grunt-cli": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-jade": "*",
+    "grunt-contrib-stylus": "*",
+    "grunt-shell": "*",
+    "express": "~4.9.7",
+    "jade": "*",
+    "stylus": "*",
+    "nib": "*",
+    "bower": "*",
+    "bower-installer": "*",
+    "coffee-script": "*",
+    "express-coffee": "git://github.com/vangie/express-coffee.git#0.0.10"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install && ./node_modules/bower-installer/bower-installer.js"
+  },
+  "devDependencies": {}
+}

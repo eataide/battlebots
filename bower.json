@@ -1,0 +1,26 @@
+{
+  "name": "MyApp",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "jquery": "*",
+    "angular": "1.3.1",
+    "angular-route": "~1.2.26",
+    "angular-cookies": "*",
+    "bootstrap": "~3.2.0",
+    "angular-ui-utils": "~0.1.1"
+  },
+  "install": {
+    "path": "public/vendor",
+    "sources": {
+      "bootstrap": [
+        "bower_components/bootstrap/dist/css/bootstrap.min.css",
+        "bower_components/bootstrap/dist/js/bootstrap.min.js",
+        "bower_components/bootstrap/dist/css/bootstrap.css.map"
+      ]
+    }
+  },
+  "resolutions": {
+    "angular": "1.3.1"
+  }
+}

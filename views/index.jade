@@ -1,0 +1,39 @@
+doctype html
+html#ng-app(ng-app='App', xmlns:ng="http://angularjs.org")
+  head
+    //- vendor scripts
+    script(src='/vendor/jquery/jquery.js')
+    script(src='/vendor/angular/angular.js')
+    script(src='/vendor/angular-route/angular-route.js')
+    script(src='/vendor/bootstrap/bootstrap.min.js')
+    script(src='/vendor/angular-ui-utils/ui-utils.js')
+
+    //- vendor style
+    link(rel='stylesheet', href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css")
+    link(rel='stylesheet', href='/vendor/bootstrap/bootstrap.min.css')
+    link(href='/vendor/bootstrap/bootstrap.css.map')
+
+    //- my scripts
+    script(src='/coffee/app.js')
+
+    //- my styles
+    link(rel="stylesheet", href="/stylus/style.css")
+
+    //- angular controllers
+    //- angular controller script links go here
+
+    //- misc settings
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, user-scalable=0")
+
+    title PHP Metrics
+
+  body(ng-controller="BodyCtrl")
+    .container-fluid
+      .row
+        //- content
+        div
+          .container-fluid
+            div.view-frame(ng-view)
+
