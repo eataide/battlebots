@@ -13,14 +13,13 @@ html#ng-app(ng-app='App', xmlns:ng="http://angularjs.org")
     link(rel='stylesheet', href='/vendor/bootstrap/bootstrap.min.css')
     link(href='/vendor/bootstrap/bootstrap.css.map')
 
-    //- my scripts
-    script(src='/coffee/app.js')
-
     //- my styles
     link(rel="stylesheet", href="/stylus/style.css")
+    link(rel="stylesheet", href="/stylus/program.css")
 
     //- angular controllers
-    //- angular controller script links go here
+    script(src='/coffee/app.js')
+    script(src='/coffee/program.js')
 
     //- misc settings
     meta(charset="utf-8")

@@ -1,0 +1,15 @@
+/* Put your css in here */
+
+.container-main {
+  height: 500px;
+}
+
+.container-program {
+  height: 100%;
+}
+
+.container-table {
+   overflow: scroll;
+   height: 70%;
+   margin-bottom: 10px;
+}

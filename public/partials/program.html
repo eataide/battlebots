@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row container-main">
+    <!-- your program section -->
+    <div class="col-sm-6 container-program">
+      <h1>Your program</h1>
+      
+      <div class="container-table">
+        <table class="table" ng-show="program.length > 0">
+          <tbody>
+            <tr ng-repeat="command in program">
+              <td>{{ command.command }}</td>
+              <td>
+                <button class="btn btn-warning" ng-click="removeCommand(command.id)">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <p ng-hide="program.length > 0">No commands added yet</p>
+      </div>
+      
+      <!-- reset button -->
+      <button class="btn btn-danger" ng-click="reset()" ng-disabled="program.length <= 0">Reset program</button>
+    </div>
+    
+    <!-- list of commands to choose from -->
+    <div class="col-sm-6">
+      <h1>API</h1>
+      <h2>
+        Instructions:
+      </h2>
+      <p>
+        Click the buttons to add commands to your program.
+      </p>
+      <ul>
+        <li ng-repeat="command in commands">
+          <button ng-click="addCommand(command)" class="btn btn-default">
+            {{ command }}
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-success" ng-click="submit()" ng-disabled="program.length <= 0">
+        Run program!
+      </button>
+    </div>
+  </div>
+</div>
