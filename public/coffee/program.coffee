@@ -39,5 +39,4 @@ App.controller "ProgramCtrl", ($scope, $rootScope, $location, $http) ->
   # submit and go to simulation page
   $scope.submit = ->
     $rootScope.program = $scope.program
-    # $location.path('/simulation')
-    alert("This is where you'd be redirected to the simulation page.")
+    $location.path('/simulate')

@@ -9,9 +9,12 @@ App = angular.module('App', ['ngRoute', 'ui.utils']).config([
     $routeProvider.when("/",
       templateUrl: "/partials/home.html"
       controller:  "BodyCtrl"
-    ).when("/",
+    ).when("/program/",
       templateUrl: "/partials/program.html"
       controller:  "ProgramCtrl"
+    ).when("/simulate/",
+      templateUrl: "/partials/simulate.html"
+      controller:  "SimulateCtrl"
     ).otherwise(redirectTo: "/")
 ])
 
