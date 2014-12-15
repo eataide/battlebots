@@ -3,10 +3,10 @@ App = angular.module("App")
 App.controller "SimulateCtrl", ($scope, $rootScope, $location, $http) ->
   # list of commands to follow
   pos = []
-  
+
   for command in $rootScope.program
     pos.push command.command
-    
+
   # list of rocks (obstacles)
   rockList = [
     {x: 200, y: 100},
@@ -24,7 +24,7 @@ App.controller "SimulateCtrl", ($scope, $rootScope, $location, $http) ->
         return true
       else
         return false
-      
+
   # draws all rocks in rockList
   drawRocks = (context, rockList, ss) ->
     for rock in rockList
@@ -32,22 +32,22 @@ App.controller "SimulateCtrl", ($scope, $rootScope, $location, $http) ->
       context.rect(rock.x, rock.y, ss, ss)
       context.fillStyle = 'gray'
       context.fill()
-    
-    
+
+
   jQuery ($) ->
     # get canvas element
     canvas = document.getElementById('canvas')
     context = canvas.getContext('2d')
-    
+
     # define size of square to draw
     ss = 100
-    
+
     # define path for square to follow
     cur = {x: 0, y: 0}
     context.rect(cur.x, cur.y, ss, ss)
     context.fillStyle = 'red'
     context.fill()
-    
+
     # draw rocks
     drawRocks(context, rockList, ss)
 
@@ -61,10 +61,10 @@ App.controller "SimulateCtrl", ($scope, $rootScope, $location, $http) ->
         return {x: cur.x - ss, y: cur.y}
       else if command is "right"
         return {x: cur.x + ss, y: cur.y}
-    
+
     # start counter
     i = 0
-    
+
     # run simulation
     simulation = setInterval ->
       if stillRunning
@@ -77,7 +77,11 @@ App.controller "SimulateCtrl", ($scope, $rootScope, $location, $http) ->
 
         # check if next move hits obstacle
         if intersects(cur, ss)
-          alert "Sorry, you died."
+          r = confirm "Sorry, you died. Would you like to try again?"
+          if r == true
+              window.location.href = "#program"
+          else
+              window.location.href = "#"
           stillRunning = false
         else
           context.rect(cur.x, cur.y, ss, ss)
@@ -89,3 +93,4 @@ App.controller "SimulateCtrl", ($scope, $rootScope, $location, $http) ->
 
         i += 1
     , 1000
+
